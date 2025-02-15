@@ -12,7 +12,8 @@ from ultralytics import YOLO
 
 
 # Load your trained age & gender model
-model = load_model("C:/Users/Admin/Downloads/age_sex_detection_rmsprop_input=100,100.keras")
+model = load_model("model.keras")                
+#model input is 70 x 70 
 input_shape = (70,70)
 # Load YOLOv8 face detection model (pre-trained model for face detection)
 yolo_face_model = YOLO("C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/yolov8n-face-lindevs.pt")  
