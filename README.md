@@ -10,3 +10,5 @@ Then scale the image and define a keras model using tensorflow backend, which us
 Define 2 output for the same model, one for age and the other for gender. The age output uses mean absolute error as its metrics, while gender output uses accuracy.
 After training the model and using best weights for the model,** we got an accuracy of 90% on the gender prediction and a mae of age about 4 years on the test data.** 
 Thus the model is memory efficient (uses memory less than 12Gb ram overall) and at the same time also produces good results. 
+
+The gui detects the face using yolov8n-face-lindevs.pt, as it is faster and better than haarcascade, which i was previously using. Thee gui draw a bounding box around the face and shows the age and gender of the person.
