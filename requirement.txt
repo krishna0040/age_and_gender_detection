@@ -1,0 +1,9 @@
+tkinter==0.1.0
+Pillow==10.0.0
+numpy==1.23.5
+opencv-python==4.8.0.76
+tensorflow==2.13.0
+keras==2.13.1
+pandas==2.0.3
+ultralytics==8.0.124
+matplotlib==3.7.2
