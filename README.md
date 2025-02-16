@@ -11,4 +11,8 @@ Define 2 output for the same model, one for age and the other for gender. The ag
 After training the model and using best weights for the model,** we got an accuracy of 90% on the gender prediction and a mae of age about 4 years on the test data.** 
 Thus the model is memory efficient (uses memory less than 12Gb ram overall) and at the same time also produces good results. 
 
-The gui detects the face using yolov8n-face-lindevs.pt, as it is faster and better than haarcascade, which i was previously using. Thee gui draw a bounding box around the face and shows the age and gender of the person.
+The age_and_gender_detection_gui detects the face using yolov8n-face-lindevs.pt, as it is faster and better than haarcascade, which i was previously using. Thee gui takes and image as input and draws a bounding box around the face and shows the age and gender of the person.
+
+The live_detection_gui open a livecam and detects in real time.
+
+The video_detection_gui uses the video as input and detects the age and gender. For this, and the live_detection gui, a dictionary is made and a unique id is given to each. This is done to prevent the model from predicting the same face again and again.
