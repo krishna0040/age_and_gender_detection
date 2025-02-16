@@ -11,9 +11,9 @@ from ultralytics import YOLO
 from datetime import datetime
 
 # Load models
-model = load_model("C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/age_sex_detection_rmsprop.keras")
+model = load_model("age_sex_detection_rmsprop.keras")
 input_shape = (70, 70)
-yolo_face_model = YOLO("C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/yolov8n-face-lindevs.pt")
+yolo_face_model = YOLO("yolov8n-face-lindevs.pt")
 
 # Initialize Tkinter
 top = tk.Tk()
@@ -130,7 +130,7 @@ def Detect(video_path):
     filtered_faces = {face_id: data for face_id, data in tracked_faces.items() if data["age"] > 55}
 
     df = pd.DataFrame.from_dict(filtered_faces, orient='index')
-    df.to_csv('C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/output.csv', index=False)
+    df.to_csv('output.csv', index=False)
 
 def show_Detect_button(file_path):
     Detect_b = Button(top, text="Detect Video", command=lambda: Detect(file_path), padx=10, pady=5)
