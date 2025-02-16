@@ -16,7 +16,7 @@ model = load_model("model.keras")
 #model input is 70 x 70 
 input_shape = (70,70)
 # Load YOLOv8 face detection model (pre-trained model for face detection)
-yolo_face_model = YOLO("C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/yolov8n-face-lindevs.pt")  
+yolo_face_model = YOLO("yolov8n-face-lindevs.pt")  
 
 top = tk.Tk()
 top.geometry('800x600')
