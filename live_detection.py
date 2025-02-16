@@ -11,9 +11,9 @@ from ultralytics import YOLO
 from datetime import datetime
 from scipy.spatial import distance
 
-model = load_model("C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/age_sex_detection_rmsprop.keras")
+model = load_model("age_sex_detection_rmsprop.keras")
 input_shape = (70, 70) 
-yolo_face_model = YOLO("C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/yolov8n-face-lindevs.pt")
+yolo_face_model = YOLO("yolov8n-face-lindevs.pt")
 
 top = tk.Tk()
 top.geometry('800x600')
@@ -122,7 +122,7 @@ def Detect():
 
 
     df = pd.DataFrame.from_dict(tracked_faces, orient='index')
-    df.to_csv('C:/Users/Admin/Desktop/nullclass/nullclass_gender_age_detection/output.csv', index=False)
+    df.to_csv('output.csv', index=False)
 
 
 live_camera = Button(top, text="Start Live Detection", command=Detect, padx=10, pady=5)
